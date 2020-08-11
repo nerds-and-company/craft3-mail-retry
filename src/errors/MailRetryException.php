@@ -2,6 +2,7 @@
 
 namespace nerdsandcompany\mailretry\errors;
 
+use Craft;
 use Exception;
 
 /**
@@ -14,14 +15,11 @@ use Exception;
  */
 class MailRetryException extends Exception
 {
-    // TODO:
-    // Translate error message
-
     /**
      * @return string the user-friendly name of this exception
      */
     public function getName()
     {
-        return 'Retry of sending mail failed';
+        return Craft::t('mail-retry', 'Retry of sending mail failed');
     }
 }

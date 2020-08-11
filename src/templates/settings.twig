@@ -1,14 +1,14 @@
 {% import '_includes/forms' as forms %}
 
 {{ forms.textField({
-    label: 'Maximum attempts' | translate,
+    label: 'Maximum attempts' | t('mail-retry'),
     name: 'maxAttempts',
     type: 'number',
     value: settings.maxAttempts
 }) }}
 
 {{ forms.textField({
-    label: 'Time to reserve' | translate,
+    label: 'Time to reserve' | t('mail-retry'),
     name: 'ttr',
     type: 'number',
     value: settings.ttr

@@ -19,10 +19,6 @@ use nerdsandcompany\mailretry\errors\MailRetryException;
  */
 class MailRetryJob extends BaseJob implements RetryableJobInterface
 {
-    // TODO:
-    // Translate description
-    // phpunit?
-
     /**
      * @var Message
      */
@@ -70,6 +66,6 @@ class MailRetryJob extends BaseJob implements RetryableJobInterface
      */
     protected function defaultDescription()
     {
-        return 'Retry mail job "'.$this->message->getSubject().'"';
+        return Craft::t('mail-retry', 'Retry sending mail: {subject}', ['subject' => $this->message->getSubject()]);
     }
 }

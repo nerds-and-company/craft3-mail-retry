@@ -54,8 +54,6 @@ class MailRetry extends Plugin
         parent::init();
         self::$plugin = $this;
         $this->watchMailer();
-        // var_dump(Craft::$app->i18n->translations);
-        // exit;
     }
 
     /**
