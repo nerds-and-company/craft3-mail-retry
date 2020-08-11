@@ -1,0 +1,15 @@
+{% import '_includes/forms' as forms %}
+
+{{ forms.textField({
+    label: 'Maximum attempts' | translate,
+    name: 'maxAttempts',
+    type: 'number',
+    value: settings.maxAttempts
+}) }}
+
+{{ forms.textField({
+    label: 'Time to reserve' | translate,
+    name: 'ttr',
+    type: 'number',
+    value: settings.ttr
+}) }}

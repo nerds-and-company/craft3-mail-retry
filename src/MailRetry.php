@@ -14,6 +14,7 @@ use craft\base\Plugin;
 use yii\base\Event;
 use yii\mail\MailEvent;
 use nerdsandcompany\mailretry\jobs\MailRetryJob;
+use nerdsandcompany\mailretry\models\Settings;
 
 /**
  * Class MailRetry
@@ -38,7 +39,7 @@ class MailRetry extends Plugin
     /**
      * @var bool
      */
-    public $hasCpSettings = false;
+    public $hasCpSettings = true;
 
     /**
      * @var bool
@@ -52,8 +53,9 @@ class MailRetry extends Plugin
     {
         parent::init();
         self::$plugin = $this;
-
         $this->watchMailer();
+        // var_dump(Craft::$app->i18n->translations);
+        // exit;
     }
 
     /**
@@ -73,6 +75,25 @@ class MailRetry extends Plugin
                     Craft::$app->getQueue()->push($retryJob);
                 }
             }
+        );
+    }
+
+    /**
+     * @inheritdoc
+     */
+    protected function createSettingsModel()
+    {
+        return new Settings();
+    }
+
+    /**
+     * @inheritdoc
+     */
+    protected function settingsHtml()
+    {
+        return Craft::$app->getView()->renderTemplate(
+            'mail-retry/settings',
+            ['settings' => $this->getSettings()]
         );
     }
 }

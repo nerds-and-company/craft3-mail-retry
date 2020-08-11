@@ -5,7 +5,7 @@ namespace nerdsandcompany\mailretry\errors;
 use Exception;
 
 /**
- * Class MailRetry
+ * Class MailRetryException
  *
  * @author    Nerds & Company
  * @package   MailRetry

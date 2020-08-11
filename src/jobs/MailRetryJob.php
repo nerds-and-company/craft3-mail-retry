@@ -6,6 +6,7 @@ use Craft;
 use craft\queue\BaseJob;
 use craft\mail\Message;
 use yii\queue\RetryableJobInterface;
+use nerdsandcompany\mailretry\MailRetry;
 use nerdsandcompany\mailretry\errors\MailRetryException;
 
 /**
@@ -19,8 +20,6 @@ use nerdsandcompany\mailretry\errors\MailRetryException;
 class MailRetryJob extends BaseJob implements RetryableJobInterface
 {
     // TODO:
-    // Configurable max attempts
-    // Configurable ttr (time to reserve)
     // Translate description
     // phpunit?
 
@@ -28,11 +27,6 @@ class MailRetryJob extends BaseJob implements RetryableJobInterface
      * @var Message
      */
     public $message;
-
-    /**
-     * @var number
-     */
-    public $maxAttempts = 5;
 
     /**
      * @inheritdoc
@@ -49,11 +43,18 @@ class MailRetryJob extends BaseJob implements RetryableJobInterface
     }
 
     /**
+     * Get maximum number of attempts
+     */
+    public function getMaxAttempts() {
+        return MailRetry::getInstance()->getSettings()->maxAttempts;
+    }
+
+    /**
      * @inheritdoc
      */
     public function getTtr()
     {
-        return 5;
+        return MailRetry::getInstance()->getSettings()->ttr;
     }
 
     /**
@@ -61,7 +62,7 @@ class MailRetryJob extends BaseJob implements RetryableJobInterface
      */
     public function canRetry($attempt, $error)
     {
-        return $attempt < $this->maxAttempts;
+        return $attempt < $this->getMaxAttempts();
     }
 
     /**
