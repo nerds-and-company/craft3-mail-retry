@@ -58,11 +58,12 @@ class MailRetryJob extends BaseJob implements RetryableJobInterface
      */
     public function canRetry($attempt, $error)
     {
-        return $attempt < $this->getMaxAttempts();
+        return $attempt <= $this->getMaxAttempts();
     }
 
     /**
      * @inheritdoc
+     * @codeCoverageIgnore
      */
     protected function defaultDescription()
     {

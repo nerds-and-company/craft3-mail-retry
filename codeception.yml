@@ -12,6 +12,7 @@ coverage:
     - src/*.php
   exclude:
     - src/translations/*
+    - src/errors/*
 modules:
   config:
     \craft\test\Craft:
