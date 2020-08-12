@@ -1,0 +1,17 @@
+actor: Tester
+paths:
+  tests: tests
+  log: tests/_output
+  data: tests/_data
+  support: tests/_support
+  envs: tests/_envs
+bootstrap: _bootstrap.php
+coverage:
+  enabled: true
+  include:
+    - src/*
+modules:
+  config:
+    \craft\test\Craft:
+        configFile: "tests/_craft/config/test.php"
+        fullMock: true

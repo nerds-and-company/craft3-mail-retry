@@ -26,7 +26,8 @@
     },
     "autoload": {
         "psr-4": {
-          "nerdsandcompany\\mailretry\\": "src/"
+            "nerdsandcompany\\mailretry\\": "src/",
+            "nerdsandcompany\\mailretry\\tests": "src/tests/unit/"
         }
     },
     "extra": {
@@ -37,5 +38,11 @@
         "documentationUrl": "https://github.com/nerds-and-company/craft3-mail-retry/blob/master/README.md",
         "changelogUrl": "https://github.com/nerds-and-company/craft3-mail-retry/blob/master/CHANGELOG.md",
         "class": "nerdsandcompany\\mailretry\\MailRetry"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.0",
+        "codeception/codeception": "^4.1",
+        "codeception/module-asserts": "^1.2",
+        "codeception/module-yii2": "^1.1"
     }
 }
