@@ -42,6 +42,7 @@
         "phpunit/phpunit": "^8.0",
         "codeception/codeception": "^4.1",
         "codeception/module-asserts": "^1.2",
-        "codeception/module-yii2": "^1.1"
+        "codeception/module-yii2": "^1.1",
+        "phpmd/phpmd": "^2.8"
     }
 }

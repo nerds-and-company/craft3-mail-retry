@@ -29,5 +29,8 @@ jobs:
       if: steps.composer-cache.outputs.cache-hit != 'true'
       run: composer install --prefer-dist --no-progress --no-suggest
 
+    - name: PHP Mess Detector
+      run: bin/phpmd
+
     - name: Run test suite
-      run: vendor/bin/codecept run unit --coverage
+      run: bin/test

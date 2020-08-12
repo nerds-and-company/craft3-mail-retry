@@ -12,6 +12,9 @@ class SettingsTest extends Unit
     protected Settings $settings;
     protected UnitTester $tester;
 
+    /**
+     * @SuppressWarnings(PHPMD.CamelCaseMethodName)
+     */
     protected function _before()
     {
         $this->tester->getPlugin($this);

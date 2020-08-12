@@ -17,6 +17,9 @@ class MailRetryTest extends Unit
     protected MailRetry $plugin;
     protected UnitTester $tester;
 
+    /**
+     * @SuppressWarnings(PHPMD.CamelCaseMethodName)
+     */
     protected function _before()
     {
         $this->plugin = $this->tester->getPlugin($this);

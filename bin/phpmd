@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+set -e
+vendor/bin/phpmd src,tests text phpmd.xml --exclude tests/_support/_generated,vendor --suffixes php
