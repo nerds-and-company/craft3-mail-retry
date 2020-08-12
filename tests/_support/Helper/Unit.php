@@ -2,11 +2,13 @@
 namespace Helper;
 
 use Craft;
+use Yii;
 use Codeception\TestInterface;
-use nerdsandcompany\mailretry\MailRetry;
+
 use craft\i18n\I18n;
-use craft\web\View;
 use craft\web\Controller;
+use craft\web\View;
+use nerdsandcompany\mailretry\MailRetry;
 
 // here you can define custom actions
 // all public methods declared in helper class will be available in $I

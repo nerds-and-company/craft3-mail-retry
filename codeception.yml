@@ -10,8 +10,11 @@ coverage:
   enabled: true
   include:
     - src/*.php
+  exclude:
+    - src/translations/*
 modules:
   config:
     \craft\test\Craft:
         configFile: "tests/_craft/config/test.php"
+        part: init
         fullMock: true

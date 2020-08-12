@@ -5,10 +5,11 @@ namespace nerdsandcompany\mailretry\tests;
 use Craft;
 use Codeception\Test\Unit;
 use UnitTester;
+
+use craft\mail\Message;
 use nerdsandcompany\mailretry\MailRetry;
 use nerdsandcompany\mailretry\models\Settings;
 use yii\base\Event;
-use craft\mail\Message;
 use yii\mail\MailEvent;
 
 class MailRetryTest extends Unit
