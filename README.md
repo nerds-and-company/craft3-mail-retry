@@ -2,8 +2,6 @@
 
 Retry mails in background when they fail
 
-![Screenshot](resources/img/plugin-logo.png)
-
 ## Requirements
 
 This plugin requires Craft CMS 3.0.0 or later.
@@ -24,20 +22,14 @@ To install the plugin, follow these instructions.
 
 ## Mail Retry Overview
 
--Insert text here-
+When a mail fails for some reason, f.e. when the mail server is unavailable, a job is created to retry the mail.
 
 ## Configuring Mail Retry
 
--Insert text here-
+You can configure maximum number of automatic retry attempts and the time to reserve between attemts
 
 ## Using Mail Retry
 
--Insert text here-
-
-## Mail Retry Roadmap
-
-Some things to do, and ideas for potential features:
-
-* Release it
+It just works
 
 Brought to you by [Nerds & Company](nerds.company)
