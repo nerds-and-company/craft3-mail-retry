@@ -9,7 +9,7 @@ bootstrap: _bootstrap.php
 coverage:
   enabled: true
   include:
-    - src/*
+    - src/*.php
 modules:
   config:
     \craft\test\Craft:
