@@ -2,7 +2,6 @@
     "name": "nerds-and-company/craft3-mail-retry",
     "description": "Retry mails in background when they fail",
     "type": "craft-plugin",
-    "version": "1.0.0",
     "keywords": [
         "craft",
         "cms",
@@ -27,7 +26,7 @@
     "autoload": {
         "psr-4": {
             "nerdsandcompany\\mailretry\\": "src/",
-            "nerdsandcompany\\mailretry\\tests": "src/tests/unit/"
+            "nerdsandcompany\\mailretry\\tests\\": "src/tests/unit/"
         }
     },
     "extra": {
