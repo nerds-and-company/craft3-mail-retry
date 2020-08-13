@@ -16,7 +16,7 @@ To install the plugin, follow these instructions.
 
 2. Then tell Composer to load the plugin:
 
-        composer require nerds-and-company/craft-mail-retry
+        composer require nerds-and-company/craft3-mail-retry
 
 3. In the Control Panel, go to Settings → Plugins and click the “Install” button for Mail Retry.
 
@@ -26,7 +26,7 @@ When a mail fails for some reason, f.e. when the mail server is unavailable, a j
 
 ## Configuring Mail Retry
 
-You can configure maximum number of automatic retry attempts and the time to reserve between attemts
+You can configure maximum number of automatic retry attempts and the time to reserve between attempts
 
 ## Using Mail Retry
 
